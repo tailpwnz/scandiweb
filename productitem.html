@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Product Item</title>
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+   <div class="wrapper">
+      <div class="container">
+         <header class="header">
+            <h1 class="title">Product Item</h1>
+            <div class="header__button">
+               <button type="submit" class="button ">Save</button>
+               <a class="button" href="/">Cancel</a>
+
+            </div>
+         </header>
+
+         <main class="list" id="form" class="form__body">
+
+            <form action="addmessage.php" name="myForm" method="post" onsubmit="return validateForm()">
+
+
+               <div class="form__item">
+                  <label for="forSPU" class="form__label"> SPU</label>
+                  <input id="forSPU" type="text" class="form__input " name="spu">
+                  <span class="error" id="error-spu"></span>
+               </div>
+
+               <div class="form__item">
+                  <label for="forName" class="form__label"> Name</label>
+                  <input id="forName" type="text" class="form__input" name="name">
+                  <span class="error" id="error-name"></span>
+               </div>
+
+               <div class="form__item">
+                  <label for="forPrice" class="form__label"> Price</label>
+                  <input id="forPrice" type="number" min="0" max="1000000" class="form__input" name="price">
+                  <span class="error" id="error-price"></span>
+               </div>
+
+
+               <div class="form__item">
+                  <label for="formSelect" class="form__label">Type Switch</label>
+                  <select id="formSelect" name="test" class="form__select">
+
+                     <option  value="size">Size</option>
+                     <option  value="height">Height</option>
+                     <option  value="weight">Weight</option>
+                  </select>
+               </div>
+
+
+               <div id="containerDiv">
+
+                  <div id="size" class="type" style="display: none">
+                     <div class="form__item">
+                        <label for="forSize" class="form__label"> Size (MB)</label>
+                        <input name="size" id="forSize" type="number" min="0" max="1000000" class="form__input" name="size">
+                        
+                     </div>
+                  </div>
+
+               </div>
+
+
+               <div id="height" class="type" style="display: none">
+                  <div class="form__item">
+                     <label for="forHeight" class="form__label"> Height(CM)</label>
+                     <input id="forHeight" type="number" min="0" max="1000000" class="form__input" name="height">
+                     <span class="error" id="error-height"></span>
+                  </div>
+
+                  <div class="form__item">
+                     <label for="forWidth" class="form__label"> Width(СM)</label>
+                     <input id="forWidth" type="number" min="0" max="1000000" class="form__input" name="width">
+                  </div>
+
+                  <div class="form__item">
+                     <label for="forLenght" class="form__label">Lenght(CM)</label>
+                     <input id="forLenght" type="number" min="0" max="1000000" class="form__input" name="lenght">
+                  </div>
+
+               </div>
+
+
+               <div id="weight" class="type" style="display: none">
+                  <div class="form__item">
+                     <label for="forWeight" class="form__label">Weight(KG)</label>
+                     <input id="forWeight" type="number" min="0" max="1000000" class="form__input" name="weight">
+                  </div>
+               </div>
+
+      </div>
+
+      <input type="submit" value="Send">
+      </form>
+
+      </main>
+
+
+
+   </div>
+   </div>
+
+
+
+
+
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="js/script.js"></script>
+</body>
+
+</html>

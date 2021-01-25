@@ -1,0 +1,224 @@
+html {
+   box-sizing: border-box;
+   font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+   margin: 0;
+   border: 0;
+   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: "Montserrat", sans-serif;
+   font-size: 16px;
+   line-height: 22px;
+   font-weight: 400;
+   color: #454242;
+}
+
+html,
+body {
+   height: 100%;
+}
+ul,
+li {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+a {
+   display: inline-block;
+   text-decoration: none;
+}
+
+.title {
+   font-family: "Montserrat", sans-serif;
+   font-size: 35px;
+   line-height: 45px;
+   font-weight: 400;
+}
+
+.container {
+   max-width: 1470px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+
+   margin: 50px 0;
+   padding-bottom: 15px;
+
+   border-bottom: 1px solid #c4c4c4;
+}
+
+.header__button {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.button {
+   display: inline-block;
+   cursor: pointer;
+   margin: 5px;
+   padding: 15px 35px;
+
+   font-size: 18px;
+   line-height: 24px;
+   font-weight: 600;
+
+   text-decoration: none;
+   background-color: #69ffa5;
+   color: #0e0c0c;
+   border: none;
+
+   transition: background-color 0.5s ease 0s;
+}
+
+.button:focus,
+.button:hover {
+   outline: none;
+   background-color: #089240;
+}
+
+.product {
+   display: flex;
+   flex-flow: row wrap;
+   margin: 0 -15px;
+   flex-basis: 250px;
+}
+
+.product__item {
+   position: relative;
+   margin: 25px 10px;
+   flex-basis: calc(25% - 23px);
+}
+.product__item-body {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   min-height: 220px;
+   padding: 10px;
+   min-width: 200px;
+
+   background-color: #fff;
+   box-shadow: 0px 10px 10px rgba(181, 181, 181, 0.15);
+}
+
+.sku,
+.name,
+.price,
+.switch {
+   margin: 10px 0;
+   text-align: center;
+}
+
+.name {
+   font-size: 18px;
+   line-height: 24px;
+   font-weight: 700;
+}
+
+.price {
+   color: #69ffa5;
+   font-weight: 700;
+}
+
+.checkbox {
+   position: absolute;
+   top: 25px;
+   left: 25px;
+}
+
+.checkbox__input {
+   display: none;
+}
+
+.checkbox__input:checked + .checkbox__label::after {
+   transform: scale(1);
+}
+
+.checkbox__label {
+   display: inline-flex;
+   position: relative;
+
+   font-size: 16px;
+   line-height: 140%;
+   cursor: pointer;
+}
+
+.checkbox__label::before {
+   content: "";
+   flex: 0 0 24px;
+   align-self: flex-start;
+
+   height: 24px;
+   background-color: #ebebe8;
+   border-radius: 4px;
+   margin: 0px 10px 0px 0px;
+}
+
+.checkbox__label::after {
+   transition: transform 0.5s ease 0s;
+   content: "";
+   width: 16px;
+   height: 16px;
+   position: absolute;
+   top: 4px;
+   left: 4px;
+   background-color: #69ffa5;
+   border-radius: 4px;
+   transform: scale(0);
+}
+
+.form__item {
+   margin: 20px 0;
+}
+
+.form__label {
+   width: 100px;
+   display: inline-flex;
+   margin-right: 25px;
+   font-size: 15px;
+   line-height: 18px;
+}
+
+.form__input,
+.form__select {
+   background-color: #f3efef;
+   width: 232px;
+   height: 30px;
+   border: 1px solid black;
+   padding: 0 10px;
+}
+.form__input:focus,
+.form__select:focus {
+   outline: none;
+   border: 1px solid #69ffa5;
+}
+
+
+.error {
+   font-size: 15px;
+   line-height: 20px;
+   color: red;
+}
